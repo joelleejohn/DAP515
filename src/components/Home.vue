@@ -1,6 +1,7 @@
 <template>
 <v-container>
 	<h1>Welcome to Rosanne Florists</h1>
+	<v-divider style="margin-bottom: 5px"></v-divider>
 	<v-row>
 		<v-carousel cycle>
 			<v-carousel-item
@@ -15,8 +16,8 @@
 					<v-card-title>{{ slide.title }}</v-card-title>
 					<v-card-subtitle>{{ slide.subtitle }}</v-card-subtitle>
 					<v-card-actions>
-						<v-btn>
-							<v-icon color="#43a047" style="padding-right: 5px;">{{ 'mdi-flower-tulip' }}</v-icon>
+						<v-btn dark  color="#43a047">
+							<v-icon style="padding-right: 5px;">{{ 'mdi-flower-tulip' }}</v-icon>
 							{{ slide.action }}
 						</v-btn>
 					</v-card-actions>
@@ -27,6 +28,10 @@
 		</v-carousel>
 	</v-row>
 	<v-divider style="margin-top:10px"></v-divider>
+	<br>
+	<v-flex width="100%">
+		<v-card-title style="justify-content: center; font-size:24px">Popular Categories</v-card-title>
+	</v-flex>
 	<v-row justify="center">
 		<v-col v-for="(category, index) in subitems" :key="index" cols="3">
 			<v-card >
@@ -54,12 +59,39 @@
 			</v-card>
 		</v-col>
 	</v-row>
+	<v-divider style="margin-top:10px"></v-divider>
+	<v-flex width="100%">
+		<v-card-title style="justify-content: center; font-size:24px">Our Recommendations</v-card-title>
+	</v-flex>
+	<v-row justify="center">
+		<v-col cols="3" v-for="item in recommendations" :key="item.title">
+			<router-link class="standardLink" to="/product">
+				<v-card>
+					<v-img class="images white--text" :src="item.image" min-width="300px">
+						<v-card-title class="imagetitle">{{ item.title }}</v-card-title>
+					</v-img>
+					<v-card-subititle>
+						<v-containter style="display: flex; flex-direction: row; gap: 30px; justify-content: space-between">
+						{{item.action}}  <span style="font-weight: bold; padding-right: 10px">  £ {{ item.price }}</span></v-containter>
+					</v-card-subititle>
+					<v-card-actions>
+						
+						<v-spacer></v-spacer>
+						<v-btn text color="#43a047" class="buttonRight">
+							View
+						</v-btn>
+					</v-card-actions>
+				</v-card>
+			</router-link>
+		</v-col>
+	</v-row>
 
 
 </v-container>
 
 </template>
 <style lang="css">
+
 #mainSheet {
 	display: flex;
 	width: 100%;
@@ -69,6 +101,11 @@
 
 .images {
 	justify-self: center;
+}
+
+.imagetitle {
+	background-color: rgba(100, 100, 100, 0.5);
+	font-size: 24px;
 }
 
 .v-carousel__controls {
@@ -81,6 +118,10 @@ button.v-btn--depressed {
 
 .defaultLink {
     text-decoration: none;
+}
+
+h1 {
+	font-family: 'Balthazar';
 }
 </style>
 <script>
@@ -96,7 +137,11 @@ export default {
 			{title: 'Bouquets', action: 'View Bouquets Collection', subtitle: 'Our collection of bouquets', image: require('../assets/Images/homeBouquets.jpg') },
 		],
 		navigationItem: {title: 'Funeral', action: 'View Funeral Tributes', subtitle: 'Our collection of funeral tributes', image: require('../assets/Images/homeFuneral.jpg'), link: "/funeralflowers" },
-
+		recommendations: [
+			{title: 'Best Buy', action: 'Christmas Bouquet', price: 38.00, subtitle: 'Our most popular item this season!', image: require('../assets/Images/recomm1.jpg')},
+			{title: 'Florist\' Choice', action: 'Christmas Hatbox', price: 40.00, subtitle: 'Our own florists\' favourites!', image: require('../assets/Images/recomm2.jpg')},
+			{title: 'Seasonal Selection', action: 'Large Christmas Bouquet', price: 45.00, subtitle: 'Looking for a seasonal gift? Here\'s some inspiration', image: require('../assets/Images/recomm3.jpg')}
+		]
 	})
 }
 </script>
