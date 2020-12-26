@@ -68,6 +68,11 @@ h1 {
 export default {
 	data: () => ({
 		image: require('../assets/Images/recomm1.jpg')
-	})
+	}),
+	mounted: function () {
+		this.$gtag.pageview({
+        	page_path: '/product',
+      });
+	}
 }
 </script>

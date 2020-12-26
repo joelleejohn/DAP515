@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import VueGtag from "vue-gtag";
 import App from './App.vue';
 import Home from './components/Home.vue';
 import ContactUs from './components/ContactUs.vue';
@@ -9,6 +10,13 @@ import vuetify from './plugins/vuetify';
 import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
+
+Vue.use(VueGtag, {
+  config: { id: "G-VTQ3Z655G9" },
+  bootstrap: false,
+  enabled: false,
+});
+
 Vue.config.productionTip = false;
 /* eslint-disable no-unused-vars */
 const router = new VueRouter({

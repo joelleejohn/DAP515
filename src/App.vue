@@ -66,6 +66,8 @@
 <script>
 import AppBar from './components/AppBar.vue';
 import Footer from './components/Footer.vue';
+import { setOptions, bootstrap } from 'vue-gtag'
+
 const cookieName = 'isCookieAccepted';
 
 function getCookie(cname) {
@@ -105,10 +107,13 @@ function setCookie(cname, cvalue) {
         let cvalue = getCookie(cookieName);
         if (cvalue){
           this.isCookieMissing = false;
-          if (cvalue === "0")
+          if (cvalue === "0"){
             this.isCookieAccepted = false;
-          else
+          }
+          else {
             this.isCookieAccepted = true;
+            this.enablePlugin();
+          }
       }
       })
     },
@@ -117,11 +122,18 @@ function setCookie(cname, cvalue) {
         this.isCookieAccepted = true;
         this.isCookieMissing = false;
         setCookie(cookieName, '1');
+        this.enablePlugin();
       },
       rejectCookies: function () {
         this.isCookieAccepted = false;
         this.isCookieMissing = false;
         setCookie(cookieName, '0');
+      },
+      enablePlugin () {
+        setOptions({ enabled: true });
+        bootstrap().then(gtag => {
+          // all done!
+        })
       }
     }
   }
