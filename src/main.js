@@ -12,6 +12,7 @@ Vue.use(VueRouter);
 Vue.config.productionTip = false;
 /* eslint-disable no-unused-vars */
 const router = new VueRouter({
+  base: '/DAP515/dist/',
   routes: [
     { path: "", components: {default: Home, sidebar: CoronavirusUpdate } },
     { path: "/funeralflowers", component: FuneralFlowers },
