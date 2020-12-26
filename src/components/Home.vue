@@ -70,7 +70,7 @@
 					<v-img class="images white--text" :src="item.image" min-width="300px">
 						<v-card-title class="imagetitle">{{ item.title }}</v-card-title>
 					</v-img>
-					<v-card-subititle>
+					<v-card-subititle class="subtitlepadded">
 						<v-containter style="display: flex; flex-direction: row; gap: 30px; justify-content: space-between">
 						{{item.action}}  <span style="font-weight: bold; padding-right: 10px">  £ {{ item.price }}</span></v-containter>
 					</v-card-subititle>
@@ -122,6 +122,10 @@ button.v-btn--depressed {
 
 h1 {
 	font-family: 'Balthazar';
+}
+
+.subtitlepadded {
+	padding: 10px;
 }
 </style>
 <script>

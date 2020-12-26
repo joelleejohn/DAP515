@@ -10,8 +10,8 @@
 			<v-card-title>Local Tributes</v-card-title>
 			<v-card-text>Tributes made by Rosanne Florists</v-card-text>
 			<v-card-actions>
-				<v-btn>
-						<v-icon color="#43a047" style="padding-right: 5px;">{{ 'mdi-flower-tulip' }}</v-icon>
+				<v-btn dark color="#43a047">
+						<v-icon style="padding-right: 5px;">{{ 'mdi-flower-tulip' }}</v-icon>
 						View Local Tributes
 				</v-btn>
 			</v-card-actions>
@@ -22,8 +22,8 @@
 			<v-card-title>Interflora Tributes</v-card-title>
 			<v-card-text>Tributes designed by Interflora</v-card-text>
 			<v-card-actions>
-				<v-btn>
-					<v-icon color="#43a047" style="padding-right: 5px;">{{ 'mdi-flower-tulip' }}</v-icon>
+				<v-btn dark color="#43a047">
+					<v-icon style="padding-right: 5px;">{{ 'mdi-flower-tulip' }}</v-icon>
 					View Interflora Tributes
 				</v-btn>
 			</v-card-actions>
