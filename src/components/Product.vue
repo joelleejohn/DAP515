@@ -71,8 +71,8 @@ export default {
 	}),
 	mounted: function () {
 		this.$gtag.pageview({
-        	page_path: '/product',
-      });
+			page_path: '/product',
+		});
 	}
 }
 </script>

@@ -131,9 +131,11 @@ function setCookie(cname, cvalue) {
       },
       enablePlugin () {
         setOptions({ enabled: true });
+        /* eslint-disable no-unused-vars */
         bootstrap().then(gtag => {
           // all done!
         })
+        /* eslint-enable no-unused-vars */
       }
     }
   }
