@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueGtag from "vue-gtag";
 import App from './App.vue';
 import Home from './components/Home.vue';
+import NotFound from './components/NotFound.vue';
 import ContactUs from './components/ContactUs.vue';
 import CoronavirusUpdate from './components/CoronavirusUpdate.vue';
 import FuneralFlowers from './components/FuneralFlowers.vue';
@@ -25,7 +26,10 @@ const router = new VueRouter({
     { path: "", components: {default: Home, sidebar: CoronavirusUpdate } },
     { path: "/funeralflowers", component: FuneralFlowers },
     { path: "/contactus", component: ContactUs },
-    { path: "/product", component: Product}
+    { path: "/product", component: Product},
+    { path: "/404", component: NotFound },
+    { path: "*", component: NotFound },
+
 
   ],
   mode: 'history',
