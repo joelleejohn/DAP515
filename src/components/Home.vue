@@ -16,7 +16,7 @@
 					<v-card-title>{{ slide.title }}</v-card-title>
 					<v-card-subtitle>{{ slide.subtitle }}</v-card-subtitle>
 					<v-card-actions>
-						<v-btn dark  color="#388539">
+						<v-btn dark  color="#43a047">
 							<v-icon style="padding-right: 5px;">{{ 'mdi-flower-tulip' }}</v-icon>
 							{{ slide.action }}
 						</v-btn>
@@ -38,7 +38,7 @@
 				<v-card-title>{{ category.title }} </v-card-title>
 				<v-img class="images" max-width="300px" :src="category.image"></v-img>
 				<v-card-actions>
-					<v-btn depressed>
+					<v-btn dark color="#388539">
 						{{ category.action }}
 					</v-btn>
 				</v-card-actions>
@@ -51,7 +51,7 @@
 				<v-card-title>{{ navigationItem.title }} </v-card-title>
 					<v-img class="images" max-width="300px" :src="navigationItem.image"></v-img>
 					<v-card-actions>
-						<v-btn depressed>
+						<v-btn dark color="#388539">
 							{{ navigationItem.action }}
 						</v-btn>
 					</v-card-actions>
@@ -77,7 +77,7 @@
 					<v-card-actions>
 						
 						<v-spacer></v-spacer>
-						<v-btn text color="#388539" class="buttonRight">
+						<v-btn dark color="#388539">
 							View
 						</v-btn>
 					</v-card-actions>
@@ -110,10 +110,6 @@
 
 .v-carousel__controls {
 	border-radius: 5px;
-}
-
-button.v-btn--depressed {
-	color: #388539 !important;
 }
 
 .defaultLink {
