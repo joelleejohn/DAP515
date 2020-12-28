@@ -17,7 +17,7 @@
                 class="defaultLink"
             >
                 <v-btn text>
-                    <v-icon left color="#43a047" size="24px" class="padding-right">
+                    <v-icon left color="#388539" size="24px" class="padding-right">
                         {{ link.icon }}
                     </v-icon>
                     {{ link.text }}
@@ -31,7 +31,7 @@
                         v-bind="attrs"
                         v-on="on"
                     >
-                        <v-icon left color="#43a047" size="24px" class="padding-right">
+                        <v-icon left color="#388539" size="24px" class="padding-right">
                             {{ link.icon }}
                         </v-icon>
                         {{ link.text }}
@@ -59,7 +59,7 @@
 
         <v-spacer></v-spacer>
 
-        <v-icon left color="#43a047">
+        <v-icon left color="#388539">
           mdi-magnify
         </v-icon>
         <v-responsive max-width="280">
@@ -87,7 +87,7 @@
     font-family: 'Balthazar';
     font-size: 24px;
     font-weight: bold;
-    color: #43a047;
+    color: #388539;
     margin: 0 15px 0 0;
 }
 

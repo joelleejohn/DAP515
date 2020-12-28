@@ -22,12 +22,12 @@
 				<v-spacer></v-spacer>
 				<v-container class="fabs">
 					<span style="font-weight: bold">£ 38.00</span>
-					<v-btn color="#43a047" light>
-							<v-icon style="padding-right: 5px;">{{ 'mdi-flower-tulip' }}</v-icon>
+					<v-btn color="#388539" dark @click="checkout">
+							<v-icon style="padding-right: 5px;">{{ 'mdi-cart' }}</v-icon>
 							Add to Cart & Checkout
 					</v-btn>
-					<v-btn>
-							<v-icon style="padding-right: 5px;">{{ 'mdi-flower-tulip' }}</v-icon>
+					<v-btn @click="addToCart">
+							<v-icon style="padding-right: 5px;">{{ 'mdi-cart-plus' }}</v-icon>
 							Add to Cart
 					</v-btn>
 					
@@ -73,6 +73,14 @@ export default {
 		this.$gtag.pageview({
 			page_path: '/product',
 		});
+	},
+	methods: {
+		addToCart: function () {
+			this.$gtag.event('add_to_cart');
+		},
+		checkout: function () {
+			this.$gtag.event('checkout');
+		}
 	}
 }
 </script>

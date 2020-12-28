@@ -13,9 +13,9 @@
 									<v-list-item-title v-text="link.text"></v-list-item-title>
 								</v-list-item-content>
 							</v-list-item>
-							<router-link class="standardLink" :to="link.link">
+							<router-link class="standardLink" :to="link.link" v-if="link.link">
 								<v-list-item>
-									<v-list-item-icon><v-icon color="#43a047" v-text="link.icon"></v-icon></v-list-item-icon>
+									<v-list-item-icon><v-icon color="#388539" v-text="link.icon"></v-icon></v-list-item-icon>
 									<v-list-item-content>
 										<v-list-item-title style="color: black" v-text="link.text"></v-list-item-title>
 									</v-list-item-content>

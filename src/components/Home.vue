@@ -16,7 +16,7 @@
 					<v-card-title>{{ slide.title }}</v-card-title>
 					<v-card-subtitle>{{ slide.subtitle }}</v-card-subtitle>
 					<v-card-actions>
-						<v-btn dark  color="#43a047">
+						<v-btn dark  color="#388539">
 							<v-icon style="padding-right: 5px;">{{ 'mdi-flower-tulip' }}</v-icon>
 							{{ slide.action }}
 						</v-btn>
@@ -77,7 +77,7 @@
 					<v-card-actions>
 						
 						<v-spacer></v-spacer>
-						<v-btn text color="#43a047" class="buttonRight">
+						<v-btn text color="#388539" class="buttonRight">
 							View
 						</v-btn>
 					</v-card-actions>
@@ -113,7 +113,7 @@
 }
 
 button.v-btn--depressed {
-	color: #43a047 !important;
+	color: #388539 !important;
 }
 
 .defaultLink {
