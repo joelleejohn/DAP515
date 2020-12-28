@@ -104,7 +104,7 @@
 }
 
 .imagetitle {
-	background-color: rgba(100, 100, 100, 0.5);
+	background-color: rgba(100, 100, 100, 0.7);
 	font-size: 24px;
 }
 
